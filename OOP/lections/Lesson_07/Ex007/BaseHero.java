@@ -35,6 +35,11 @@ public class BaseHero {
         this.hp = Hp + this.hp > this.maxHp ? this.maxHp : Hp + this.hp;
     }
 
+    public void GetHeal(BaseHero target) {
+        int Hp = BaseHero.r.nextInt(7, 15);
+        target.healed(Hp);
+    }
+
     public void GetDamage(int damage) {
         if (this.hp - damage > 0) {
             this.hp -= damage;
